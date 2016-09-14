@@ -28,8 +28,8 @@ public class PingPong {
                         } catch (InterruptedException ignore) {
                         }
                     }
-                    System.out.println(sound == PING ? "Ping" : "Pong");
-                    nextSound = sound == PING ? PONG : PING;
+                    sound.printSound();
+                    nextSound = sound.nextSound();
                     lock.notify();
                 }
             }
